@@ -1,0 +1,266 @@
+/* ============================================
+   Glass Theme — Hello Darling, LLC
+   Glassmorphism overlay matching darlingdrinkco.com
+   ============================================ */
+
+/* --- Font overrides (Google Fonts loaded in theme.liquid) --- */
+:root {
+  --font-heading-family: 'Pacifico', cursive !important;
+  --font-heading-style: normal !important;
+  --font-heading-weight: 400 !important;
+  --font-body-family: 'Quicksand', sans-serif !important;
+  --font-body-style: normal !important;
+  --font-body-weight: 400 !important;
+  --font-body-weight-bold: 700 !important;
+}
+
+/* --- Body gradient background --- */
+body {
+  background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 30%, #fecdd3 60%, #fff1f2 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* --- Color scheme overrides --- */
+.color-scheme-6ff25d35-98c3-498a-82ba-78a8c4c6acfd,
+.color-scheme-1 {
+  --color-background: 255 241 242;
+}
+
+/* --- Glass card effect --- */
+.card,
+.card--card,
+.card--standard {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
+  border-radius: 24px !important;
+  overflow: hidden;
+}
+
+.card__inner {
+  border-radius: 24px !important;
+  background: transparent !important;
+}
+
+.card__media {
+  border-radius: 24px 24px 0 0 !important;
+  overflow: hidden;
+}
+
+.card-wrapper {
+  border-radius: 24px !important;
+}
+
+/* Collection cards */
+.collection-list__item .card,
+.collection-card-wrapper .card {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
+  border-radius: 24px !important;
+}
+
+/* --- Header glass --- */
+.header-wrapper {
+  background: rgba(255, 255, 255, 0.45) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.2) !important;
+}
+
+.header {
+  background: transparent !important;
+}
+
+/* --- Announcement bar --- */
+.announcement-bar {
+  background: rgba(200, 100, 104, 0.85) !important;
+}
+
+.announcement-bar__message {
+  color: #ffffff !important;
+}
+
+/* --- Content sections glass --- */
+.rich-text,
+.content-container {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
+  padding: 2rem !important;
+}
+
+/* Image with text section */
+.image-with-text {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
+  overflow: hidden;
+}
+
+/* Image banner */
+.banner {
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.banner__media {
+  border-radius: 24px !important;
+  overflow: hidden !important;
+}
+
+/* --- Buttons --- */
+.button--primary {
+  border-radius: 9999px !important;
+  background: #c86468 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.button--primary:hover {
+  background: #b55559 !important;
+}
+
+.button--secondary {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 9999px !important;
+  color: #9f1239 !important;
+  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
+}
+
+.button--secondary:hover {
+  background: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* --- Footer glass --- */
+.footer {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+/* --- Collection list section --- */
+.collection-list-wrapper {
+  background: transparent !important;
+}
+
+/* --- Section backgrounds transparent --- */
+.gradient {
+  background: transparent !important;
+}
+
+/* Color scheme sections — make transparent so gradient shows through */
+[class*="color-scheme-"] {
+  background: transparent !important;
+}
+
+/* Keep announcement bar opaque */
+.announcement-bar-section [class*="color-scheme-"] {
+  background: rgba(200, 100, 104, 0.85) !important;
+}
+
+/* --- Cart drawer/notification glass --- */
+.cart-notification-wrapper {
+  background: rgba(255, 241, 242, 0.97) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.2) !important;
+}
+
+cart-drawer .drawer {
+  background: rgba(255, 241, 242, 0.97) !important;
+}
+
+/* --- Menu drawer glass --- */
+menu-drawer .drawer {
+  background: rgba(255, 241, 242, 0.97) !important;
+}
+
+/* --- Text colors on transparent backgrounds --- */
+h1, h2, h3, h4, h5, h6,
+.h0, .h1, .h2, .h3, .h4, .h5 {
+  color: #9f1239 !important;
+}
+
+body,
+p,
+.rte {
+  color: #1f2937 !important;
+}
+
+a:not(.button) {
+  color: #9f1239 !important;
+}
+
+/* Nav links */
+.header__menu-item,
+.header__menu-item span {
+  color: #9f1239 !important;
+}
+
+/* Footer text */
+.footer a,
+.footer p,
+.footer span {
+  color: #1f2937 !important;
+}
+
+/* --- Social icons --- */
+.social-icons__link {
+  color: #9f1239 !important;
+}
+
+/* --- Product price --- */
+.price-item {
+  color: #1f2937 !important;
+}
+
+/* --- Search and inputs --- */
+.search__input,
+.field__input {
+  border-radius: 9999px !important;
+  border: 1px solid rgba(200, 100, 130, 0.3) !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* --- Slider/carousel dots --- */
+.slider-counter {
+  color: #9f1239 !important;
+}
+
+/* --- Mobile adjustments --- */
+@media screen and (max-width: 749px) {
+  .banner {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .rich-text,
+  .content-container {
+    padding: 1.5rem !important;
+    border-radius: 16px !important;
+  }
+
+  .card,
+  .card--card,
+  .card--standard {
+    border-radius: 16px !important;
+  }
+
+  .card__inner {
+    border-radius: 16px !important;
+  }
+
+  .card__media {
+    border-radius: 16px 16px 0 0 !important;
+  }
+}
+
+/* --- Spacing between sections --- */
+.section-template--*-padding {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
