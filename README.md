@@ -36,6 +36,18 @@ docs/            Design specs (not synced to Shopify)
 - **Platform**: Shopify (Liquid, CSS, vanilla JS)
 - **Build Tools**: None required
 
+## Design Customizations
+
+The theme uses a glassmorphism design overlay (`assets/glass-theme.css`) on top of the Rise base theme:
+
+- **Font**: Quicksand (headers and body)
+- **Color**: #c86468 dusty rose/coral accent
+- **Effects**: Translucent panels with frosted glass / backdrop blur
+- **Header**: Non-sticky — scrolls away on product pages for maximum viewing area
+- **Opacity**: Glass elements tuned for readability over product images
+
+All design rules use `!important` to override Shopify editor defaults by design. The `glass-theme.css` file is the single source for visual customizations.
+
 ## Links
 
 - [Shopify Liquid Docs](https://shopify.dev/docs/storefronts/themes)

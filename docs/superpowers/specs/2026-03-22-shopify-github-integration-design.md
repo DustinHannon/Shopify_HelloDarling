@@ -49,7 +49,7 @@ node_modules/
 - **Brand**: Hello Darling, LLC / Darling Drink Company (sister brand)
 - **Store URL**: hellodarlingdesigns.net
 - **GitHub Repo**: https://github.com/DustinHannon/Shopify_HelloDarling (public)
-- **Customizations**: HD logo, Murecho font, #c86468 dusty rose color, Facebook/TikTok social links, notification-based cart, announcement bar ("CURRENT PRODUCTION TIME 4-7 BUSINESS DAYS")
+- **Customizations**: HD logo, Quicksand font (via glass-theme.css, replaced Murecho), #c86468 dusty rose color, glassmorphism design overlay, non-sticky header, Facebook/TikTok social links, notification-based cart, announcement bar ("CURRENT PRODUCTION TIME 4-7 BUSINESS DAYS")
 - **Product Collections**: Embroidery, Badge Reels/Pop Sockets, Tea Towels, Magnets, Leather Products
 - **Structure**: Standard Shopify theme (assets/, config/, layout/, locales/, sections/, snippets/, templates/)
 - **Build tools**: None — pure Liquid/Shopify
