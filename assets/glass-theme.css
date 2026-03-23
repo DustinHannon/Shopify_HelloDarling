@@ -1,9 +1,13 @@
 /* ============================================
    Glass Theme — Hello Darling, LLC
-   Glassmorphism overlay matching darlingdrinkco.com
+   Glassmorphism overlay for Shopify Rise theme
+   All values hardcoded — theme CSS wins over
+   Shopify editor settings by design.
    ============================================ */
 
-/* --- Font overrides (Google Fonts loaded in theme.liquid) --- */
+/* ===========================================
+   1. FONTS
+   =========================================== */
 :root {
   --font-heading-family: 'Quicksand', sans-serif !important;
   --font-heading-style: normal !important;
@@ -14,105 +18,171 @@
   --font-body-weight-bold: 700 !important;
 }
 
-/* --- Body gradient background --- */
-body {
+/* Direct font application (beats Shopify variable fallbacks) */
+body,
+body *:not(svg):not(svg *) {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h0, .h1, .h2, .h3, .h4, .h5 {
+  font-family: 'Quicksand', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* ===========================================
+   2. BODY GRADIENT BACKGROUND
+   High specificity to beat Shopify color schemes
+   =========================================== */
+body,
+body.gradient {
   background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 30%, #fecdd3 60%, #fff1f2 100%) !important;
   background-attachment: fixed !important;
+  background-color: #fff1f2 !important;
 }
 
-/* --- Color scheme overrides --- */
-.color-scheme-6ff25d35-98c3-498a-82ba-78a8c4c6acfd,
-.color-scheme-1 {
-  --color-background: 255 241 242;
+/* ===========================================
+   3. COLOR SCHEME TRANSPARENCY
+   Make Shopify color scheme backgrounds transparent
+   so the body gradient shows through, but targeted
+   =========================================== */
+
+/* Override ALL color scheme backgrounds to transparent */
+.color-scheme-1,
+.color-scheme-2,
+.color-scheme-3,
+.color-scheme-4,
+.color-scheme-5,
+[class*="color-scheme-6ff25d35"],
+[class*="color-scheme-33415307"] {
+  --color-background: 255 241 242 !important;
+  --gradient-background: transparent !important;
+  background-color: transparent !important;
 }
 
-/* --- Glass card effect --- */
-.card,
-.card--card,
-.card--standard {
-  background: rgba(255, 255, 255, 0.25) !important;
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
-  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
-  border-radius: 24px !important;
-  overflow: hidden;
-}
-
-.card__inner {
-  border-radius: 24px !important;
+/* Gradient class — make transparent */
+body .gradient,
+.gradient {
   background: transparent !important;
+  background-color: transparent !important;
 }
 
-.card__media {
-  border-radius: 24px 24px 0 0 !important;
-  overflow: hidden;
+/* ===========================================
+   4. ANNOUNCEMENT BAR
+   =========================================== */
+.announcement-bar,
+.announcement-bar-section,
+.announcement-bar-section .color-scheme-1,
+.announcement-bar-section [class*="color-scheme-"] {
+  background: rgba(200, 100, 104, 0.9) !important;
+  background-color: rgba(200, 100, 104, 0.9) !important;
 }
 
-.card-wrapper {
-  border-radius: 24px !important;
-}
-
-/* Collection cards */
-.collection-list__item .card,
-.collection-card-wrapper .card {
-  background: rgba(255, 255, 255, 0.25) !important;
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
-  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
-  border-radius: 24px !important;
-}
-
-/* --- Header glass --- */
-.header-wrapper {
-  background: rgba(255, 255, 255, 0.45) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
-  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.2) !important;
-}
-
-.header {
-  background: transparent !important;
-}
-
-/* --- Announcement bar --- */
-.announcement-bar {
-  background: rgba(200, 100, 104, 0.85) !important;
-}
-
-.announcement-bar__message {
+.announcement-bar *,
+.announcement-bar p,
+.announcement-bar a,
+.announcement-bar__message,
+.announcement-bar__message p,
+.announcement-bar__link {
   color: #ffffff !important;
 }
 
-/* --- Content sections glass --- */
-.rich-text,
-.content-container {
-  background: rgba(255, 255, 255, 0.25) !important;
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
-  border-radius: 24px !important;
-  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
-  padding: 2rem !important;
+/* Social icons in announcement bar area */
+.utility-bar a,
+.utility-bar .icon {
+  color: #ffffff !important;
 }
 
-/* Image with text section */
-.image-with-text {
-  background: rgba(255, 255, 255, 0.25) !important;
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
-  border-radius: 24px !important;
-  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
-  overflow: hidden;
+/* Top bar with social icons */
+.announcement-bar-section .list-social__link,
+.announcement-bar-section .social-icons__link {
+  color: #ffffff !important;
 }
 
-/* Image banner — glass framed within page width */
-.banner {
+/* ===========================================
+   5. HEADER — FROSTED GLASS
+   =========================================== */
+.section-header,
+.section-header .header-wrapper,
+.section-header [class*="color-scheme-"] {
+  background: rgba(255, 255, 255, 0.45) !important;
+  background-color: rgba(255, 255, 255, 0.45) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 4px 20px rgba(200, 100, 130, 0.12) !important;
+}
+
+.header-wrapper .header {
+  background: transparent !important;
+}
+
+/* Nav links */
+.header__menu-item,
+.header__menu-item span,
+.header__menu-item a,
+.header a,
+.header__icon {
+  color: #9f1239 !important;
+}
+
+/* Active nav link */
+.header__menu-item:hover,
+.header__menu-item a:hover {
+  color: #c86468 !important;
+}
+
+/* Search button — round, no square box */
+.header details-disclosure,
+.header details[open] summary,
+.header .header__search {
+  border: none !important;
+  outline: none !important;
+}
+
+.header .header__icon,
+.header summary.header__icon {
+  border: none !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.header .header__icon:hover,
+.header summary.header__icon:hover {
+  background: rgba(200, 100, 130, 0.1) !important;
+}
+
+/* Search field */
+.header .field,
+.header .search__input,
+.header .field__input {
+  border-radius: 9999px !important;
+  border: 1px solid rgba(200, 100, 130, 0.25) !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.header .field__button {
+  border: none !important;
+  border-radius: 0 9999px 9999px 0 !important;
+}
+
+/* ===========================================
+   6. HERO BANNER — GLASS FRAMED
+   =========================================== */
+.banner,
+[class*="banner--"] {
   border-radius: 24px !important;
   overflow: hidden !important;
-  max-width: var(--page-width) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  max-width: var(--page-width, 1200px) !important;
+  margin: 1.5rem auto !important;
   background: rgba(255, 255, 255, 0.25) !important;
   border: 1px solid rgba(255, 255, 255, 0.4) !important;
   box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
   padding: 0.5rem !important;
 }
 
-.banner__media {
+.banner__media,
+.banner__media.media {
   border-radius: 20px !important;
   overflow: hidden !important;
 }
@@ -122,138 +192,296 @@ body {
   height: auto !important;
   object-fit: cover !important;
   border-radius: 20px !important;
+  max-height: 500px !important;
 }
 
-/* --- Buttons --- */
-.button--primary {
+/* ===========================================
+   7. CONTENT SECTIONS — GLASS CARDS
+   =========================================== */
+
+/* Rich text / welcome section */
+.rich-text.content-container,
+.rich-text,
+section .content-container {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
+  padding: 2.5rem 2rem !important;
+  max-width: var(--page-width, 1200px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Image with text section */
+.image-with-text,
+.image-with-text__grid {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
+  overflow: hidden !important;
+}
+
+.image-with-text__media {
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}
+
+/* ===========================================
+   8. PRODUCT & COLLECTION CARDS — GLASS
+   =========================================== */
+.card,
+.card--card,
+.card--standard {
+  background: rgba(255, 255, 255, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.12) !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+}
+
+.card__inner {
+  border-radius: 24px !important;
+  background: transparent !important;
+}
+
+.card__media {
+  border-radius: 24px 24px 0 0 !important;
+  overflow: hidden !important;
+}
+
+.card-wrapper {
+  border-radius: 24px !important;
+}
+
+.card__content,
+.card__information {
+  padding: 1rem !important;
+}
+
+/* Collection cards — same glass */
+.collection-list__item .card,
+.collection-card-wrapper .card {
+  background: rgba(255, 255, 255, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.12) !important;
+  border-radius: 24px !important;
+}
+
+/* ===========================================
+   9. BUTTONS
+   =========================================== */
+.button--primary,
+.shopify-challenge__button,
+button.button--primary {
   border-radius: 9999px !important;
   background: #c86468 !important;
+  background-color: #c86468 !important;
   color: #ffffff !important;
   border: none !important;
+  font-weight: 600 !important;
+  padding: 0.8rem 2rem !important;
 }
 
 .button--primary:hover {
   background: #b55559 !important;
+  background-color: #b55559 !important;
 }
 
-.button--secondary {
-  background: rgba(255, 255, 255, 0.25) !important;
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+.button--secondary,
+button.button--secondary {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border: 1px solid rgba(200, 100, 130, 0.3) !important;
   border-radius: 9999px !important;
   color: #9f1239 !important;
-  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
+  font-weight: 600 !important;
+  padding: 0.8rem 2rem !important;
 }
 
 .button--secondary:hover {
-  background: rgba(255, 255, 255, 0.4) !important;
+  background: rgba(255, 255, 255, 0.5) !important;
 }
 
-/* --- Footer glass --- */
-.footer {
+/* ===========================================
+   10. FOOTER — GLASS
+   =========================================== */
+.section-footer,
+.section-footer .footer,
+.section-footer [class*="color-scheme-"] {
   background: rgba(255, 255, 255, 0.3) !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.4) !important;
 }
 
-/* --- Collection list section --- */
-.collection-list-wrapper {
-  background: transparent !important;
+.footer a,
+.footer p,
+.footer span,
+.footer li {
+  color: #1f2937 !important;
 }
 
-/* --- Section backgrounds transparent --- */
-.gradient {
-  background: transparent !important;
+.footer a:hover {
+  color: #9f1239 !important;
 }
 
-/* Color scheme sections — make transparent so gradient shows through */
-[class*="color-scheme-"] {
-  background: transparent !important;
+.footer .social-icons__link {
+  color: #9f1239 !important;
 }
 
-/* Keep announcement bar opaque */
-.announcement-bar-section [class*="color-scheme-"] {
-  background: rgba(200, 100, 104, 0.85) !important;
+/* ===========================================
+   11. TEXT COLORS
+   =========================================== */
+
+/* Headings — dark rose */
+h1, h2, h3, h4, h5, h6,
+.h0, .h1, .h2, .h3, .h4, .h5 {
+  color: #9f1239 !important;
 }
 
-/* --- Cart drawer/notification glass --- */
-.cart-notification-wrapper {
+/* Body text — dark gray */
+body,
+p,
+.rte,
+li,
+span:not(.announcement-bar__message *):not(.utility-bar *) {
+  color: #1f2937 !important;
+}
+
+/* Links — dark rose */
+a:not(.button):not(.announcement-bar a):not(.utility-bar a) {
+  color: #9f1239 !important;
+}
+
+a:not(.button):hover {
+  color: #c86468 !important;
+}
+
+/* Product price */
+.price-item,
+.price-item--regular,
+.price-item--sale {
+  color: #1f2937 !important;
+}
+
+/* Social icons */
+.social-icons__link,
+.list-social__link {
+  color: #9f1239 !important;
+}
+
+/* ===========================================
+   12. CART DRAWER / NOTIFICATION — GLASS
+   =========================================== */
+.cart-notification-wrapper,
+.cart-notification {
   background: rgba(255, 241, 242, 0.97) !important;
   border: 1px solid rgba(255, 255, 255, 0.4) !important;
   border-radius: 24px !important;
   box-shadow: 0 8px 32px rgba(200, 100, 130, 0.2) !important;
 }
 
-cart-drawer .drawer {
-  background: rgba(255, 241, 242, 0.97) !important;
-}
-
-/* --- Menu drawer glass --- */
+cart-drawer .drawer,
 menu-drawer .drawer {
   background: rgba(255, 241, 242, 0.97) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.4) !important;
 }
 
-/* --- Text colors on transparent backgrounds --- */
-h1, h2, h3, h4, h5, h6,
-.h0, .h1, .h2, .h3, .h4, .h5 {
-  color: #9f1239 !important;
-}
-
-body,
-p,
-.rte {
-  color: #1f2937 !important;
-}
-
-a:not(.button) {
-  color: #9f1239 !important;
-}
-
-/* Nav links */
-.header__menu-item,
-.header__menu-item span {
-  color: #9f1239 !important;
-}
-
-/* Footer text */
-.footer a,
-.footer p,
-.footer span {
-  color: #1f2937 !important;
-}
-
-/* --- Social icons --- */
-.social-icons__link {
-  color: #9f1239 !important;
-}
-
-/* --- Product price --- */
-.price-item {
-  color: #1f2937 !important;
-}
-
-/* --- Search and inputs --- */
+/* ===========================================
+   13. SEARCH & FORM INPUTS
+   =========================================== */
+.field__input,
+.form__input,
 .search__input,
-.field__input {
-  border-radius: 9999px !important;
-  border: 1px solid rgba(200, 100, 130, 0.3) !important;
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  border-radius: 12px !important;
+  border: 1px solid rgba(200, 100, 130, 0.25) !important;
   background: rgba(255, 255, 255, 0.5) !important;
 }
 
-/* --- Slider/carousel dots --- */
+.field,
+.form__input-wrapper {
+  border-radius: 12px !important;
+}
+
+/* ===========================================
+   14. SECTION SPACING
+   =========================================== */
+section + section {
+  margin-top: 1.5rem;
+}
+
+.page-width {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* ===========================================
+   15. SLIDER / CAROUSEL
+   =========================================== */
 .slider-counter {
   color: #9f1239 !important;
 }
 
-/* --- Mobile adjustments --- */
+/* ===========================================
+   16. DROPDOWN MENUS
+   =========================================== */
+.header__submenu,
+.mega-menu__content,
+.header__menu-item .list-menu {
+  background: rgba(255, 241, 242, 0.97) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
+}
+
+/* ===========================================
+   17. PREDICTIVE SEARCH
+   =========================================== */
+.predictive-search,
+.predictive-search__results-groups-wrapper {
+  background: rgba(255, 241, 242, 0.97) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 16px !important;
+}
+
+/* ===========================================
+   18. BADGES
+   =========================================== */
+.badge {
+  border-radius: 9999px !important;
+}
+
+/* ===========================================
+   19. MOBILE ADJUSTMENTS
+   =========================================== */
 @media screen and (max-width: 749px) {
-  .banner {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+  .banner,
+  [class*="banner--"] {
+    margin: 0.75rem !important;
+    border-radius: 16px !important;
   }
 
+  .banner__media,
+  .banner__media img {
+    border-radius: 12px !important;
+  }
+
+  .banner__media img {
+    max-height: 300px !important;
+  }
+
+  .rich-text.content-container,
   .rich-text,
-  .content-container {
-    padding: 1.5rem !important;
+  section .content-container {
+    padding: 1.5rem 1rem !important;
     border-radius: 16px !important;
+    margin-left: 0.75rem !important;
+    margin-right: 0.75rem !important;
   }
 
   .card,
@@ -269,10 +497,57 @@ a:not(.button) {
   .card__media {
     border-radius: 16px 16px 0 0 !important;
   }
+
+  .image-with-text,
+  .image-with-text__grid {
+    border-radius: 16px !important;
+  }
+
+  .page-width {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
 
-/* --- Spacing between sections --- */
-.section-template--*-padding {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+/* ===========================================
+   20. MISC OVERRIDES
+   =========================================== */
+
+/* Remove any leftover solid backgrounds on sections */
+.shopify-section > .gradient,
+.shopify-section > [class*="color-"] {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* But preserve glass on targeted sections */
+.shopify-section .card,
+.shopify-section .rich-text,
+.shopify-section .image-with-text,
+.shopify-section .banner {
+  /* These inherit their glass styles from above */
+}
+
+/* Keep announcement bar opaque */
+.shopify-section--announcement-bar .gradient,
+.shopify-section--announcement-bar [class*="color-"],
+.shopify-section.shopify-section--announcement-bar {
+  background: rgba(200, 100, 104, 0.9) !important;
+  background-color: rgba(200, 100, 104, 0.9) !important;
+}
+
+/* Icon SVGs — inherit parent color */
+.icon,
+svg.icon {
+  color: inherit !important;
+}
+
+/* Payment icons in footer — don't tint */
+.list-payment .payment-icon {
+  color: initial !important;
+}
+
+/* Powered by Shopify link */
+.footer .copyright a {
+  color: #9f1239 !important;
 }
