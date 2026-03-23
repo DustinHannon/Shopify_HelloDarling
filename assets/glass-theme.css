@@ -9,7 +9,7 @@
    1. FONTS
    =========================================== */
 :root {
-  --font-heading-family: 'Quicksand', sans-serif !important;
+  --font-heading-family: 'Pacifico', cursive !important;
   --font-heading-style: normal !important;
   --font-heading-weight: 700 !important;
   --font-body-family: 'Quicksand', sans-serif !important;
@@ -26,8 +26,8 @@ body *:not(svg):not(svg *) {
 
 h1, h2, h3, h4, h5, h6,
 .h0, .h1, .h2, .h3, .h4, .h5 {
-  font-family: 'Quicksand', sans-serif !important;
-  font-weight: 700 !important;
+  font-family: 'Pacifico', cursive !important;
+  font-weight: 400 !important;
 }
 
 /* ===========================================
@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6,
    =========================================== */
 body,
 body.gradient {
-  background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 30%, #fecdd3 60%, #fff1f2 100%) !important;
+  background: linear-gradient(135deg, #fff1f2 0%, #fce7f3 20%, #fecdd3 40%, #fbcfe8 60%, #fde2e4 80%, #fff1f2 100%) !important;
   background-attachment: fixed !important;
   background-color: #fff1f2 !important;
 }
