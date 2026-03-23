@@ -105,8 +105,8 @@ body .gradient,
 .section-header,
 .section-header .header-wrapper,
 .section-header [class*="color-scheme-"] {
-  background: rgba(255, 255, 255, 0.45) !important;
-  background-color: rgba(255, 255, 255, 0.45) !important;
+  background: rgba(255, 241, 242, 0.88) !important;
+  background-color: rgba(255, 241, 242, 0.88) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
   box-shadow: 0 4px 20px rgba(200, 100, 130, 0.12) !important;
 }
@@ -175,8 +175,8 @@ body .gradient,
   overflow: hidden !important;
   max-width: var(--page-width, 1200px) !important;
   margin: 1.5rem auto !important;
-  background: rgba(255, 255, 255, 0.25) !important;
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  background: rgba(255, 241, 242, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
   box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
   padding: 0.5rem !important;
 }
@@ -203,8 +203,8 @@ body .gradient,
 .rich-text.content-container,
 .rich-text,
 section .content-container {
-  background: rgba(255, 255, 255, 0.25) !important;
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  background: rgba(255, 241, 242, 0.78) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
   border-radius: 24px !important;
   box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
   padding: 2.5rem 2rem !important;
@@ -216,8 +216,8 @@ section .content-container {
 /* Image with text section */
 .image-with-text,
 .image-with-text__grid {
-  background: rgba(255, 255, 255, 0.25) !important;
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  background: rgba(255, 241, 242, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
   border-radius: 24px !important;
   box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
   overflow: hidden !important;
@@ -234,8 +234,8 @@ section .content-container {
 .card,
 .card--card,
 .card--standard {
-  background: rgba(255, 255, 255, 0.35) !important;
-  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  background: rgba(255, 241, 242, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
   box-shadow: 0 8px 32px rgba(200, 100, 130, 0.12) !important;
   border-radius: 24px !important;
   overflow: hidden !important;
@@ -263,8 +263,8 @@ section .content-container {
 /* Collection cards — same glass */
 .collection-list__item .card,
 .collection-card-wrapper .card {
-  background: rgba(255, 255, 255, 0.35) !important;
-  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  background: rgba(255, 241, 242, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
   box-shadow: 0 8px 32px rgba(200, 100, 130, 0.12) !important;
   border-radius: 24px !important;
 }
@@ -291,7 +291,7 @@ button.button--primary {
 
 .button--secondary,
 button.button--secondary {
-  background: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 241, 242, 0.65) !important;
   border: 1px solid rgba(200, 100, 130, 0.3) !important;
   border-radius: 9999px !important;
   color: #9f1239 !important;
@@ -300,7 +300,7 @@ button.button--secondary {
 }
 
 .button--secondary:hover {
-  background: rgba(255, 255, 255, 0.5) !important;
+  background: rgba(255, 241, 242, 0.85) !important;
 }
 
 /* ===========================================
@@ -309,8 +309,8 @@ button.button--secondary {
 .section-footer,
 .section-footer .footer,
 .section-footer [class*="color-scheme-"] {
-  background: rgba(255, 255, 255, 0.3) !important;
-  background-color: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 241, 242, 0.75) !important;
+  background-color: rgba(255, 241, 242, 0.75) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.4) !important;
 }
 
@@ -400,7 +400,7 @@ textarea,
 select {
   border-radius: 12px !important;
   border: 1px solid rgba(200, 100, 130, 0.25) !important;
-  background: rgba(255, 255, 255, 0.5) !important;
+  background: rgba(255, 255, 255, 0.75) !important;
 }
 
 .field,
@@ -431,12 +431,30 @@ section + section {
    16. DROPDOWN MENUS
    =========================================== */
 .header__submenu,
+.header__submenu.list-menu,
+.header__submenu.color-scheme-3,
+.header__submenu[class*="color-"],
 .mega-menu__content,
-.header__menu-item .list-menu {
+.mega-menu__content[class*="color-"],
+.header__menu-item .list-menu,
+.header details-disclosure .list-menu {
   background: rgba(255, 241, 242, 0.97) !important;
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  background-color: rgba(255, 241, 242, 0.97) !important;
+  border: 1px solid rgba(200, 100, 130, 0.15) !important;
   border-radius: 16px !important;
   box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
+  padding: 0.75rem 0 !important;
+}
+
+/* Dropdown menu items */
+.header__submenu .header__menu-item,
+.header__submenu .list-menu__item {
+  color: #9f1239 !important;
+}
+
+.header__submenu .header__menu-item:hover,
+.header__submenu .list-menu__item:hover {
+  background: rgba(200, 100, 130, 0.08) !important;
 }
 
 /* ===========================================
