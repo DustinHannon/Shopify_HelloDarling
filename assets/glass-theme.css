@@ -5,9 +5,9 @@
 
 /* --- Font overrides (Google Fonts loaded in theme.liquid) --- */
 :root {
-  --font-heading-family: 'Pacifico', cursive !important;
+  --font-heading-family: 'Quicksand', sans-serif !important;
   --font-heading-style: normal !important;
-  --font-heading-weight: 400 !important;
+  --font-heading-weight: 700 !important;
   --font-body-family: 'Quicksand', sans-serif !important;
   --font-body-style: normal !important;
   --font-body-weight: 400 !important;
@@ -99,17 +99,29 @@ body {
   overflow: hidden;
 }
 
-/* Image banner */
+/* Image banner — glass framed within page width */
 .banner {
   border-radius: 24px !important;
   overflow: hidden !important;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  max-width: var(--page-width) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 8px 32px rgba(200, 100, 130, 0.15) !important;
+  padding: 0.5rem !important;
 }
 
 .banner__media {
-  border-radius: 24px !important;
+  border-radius: 20px !important;
   overflow: hidden !important;
+}
+
+.banner__media img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+  border-radius: 20px !important;
 }
 
 /* --- Buttons --- */
