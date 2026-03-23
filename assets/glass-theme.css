@@ -303,6 +303,17 @@ button.button--secondary {
   background: rgba(255, 241, 242, 0.85) !important;
 }
 
+/* Kill square pseudo-element borders on buttons */
+.button::before,
+.button::after,
+.shopify-challenge__button::before,
+.shopify-challenge__button::after,
+.customer button::before,
+.customer button::after {
+  border-radius: 9999px !important;
+  box-shadow: none !important;
+}
+
 /* ===========================================
    10. FOOTER — GLASS
    =========================================== */
@@ -406,6 +417,19 @@ select {
 .field,
 .form__input-wrapper {
   border-radius: 12px !important;
+}
+
+/* Kill square pseudo-element borders on fields */
+.field::before,
+.field::after,
+.select::before,
+.select::after,
+.customer .field::before,
+.customer .field::after,
+.localization-form__select::before,
+.localization-form__select::after {
+  border-radius: 12px !important;
+  box-shadow: none !important;
 }
 
 /* ===========================================
