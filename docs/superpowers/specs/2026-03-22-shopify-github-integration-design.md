@@ -1,5 +1,7 @@
 # Shopify GitHub Integration Setup — Design Spec
 
+**Status**: Completed (2026-03-22)
+
 ## Context
 
 Hello Darling, LLC runs a Shopify store (hellodarlingdesigns.net) selling custom apparel and gifts using the Rise theme v15.4.0. The theme had been customized via the Shopify theme editor (logo, Murecho font, #c86468 color scheme, social links, cart config). The goal was to establish version-controlled theme development with automatic bidirectional sync between GitHub and Shopify, without overwriting any existing live customizations.
@@ -38,16 +40,20 @@ The setup used the "Connect from GitHub" flow which creates a new unpublished th
 **/CLAUDE.md
 node_modules/
 .claude/
+.playwright-mcp/
 ```
 
 ## Theme Details
 
 - **Theme**: Shopify Rise v15.4.0
 - **Brand**: Hello Darling, LLC / Darling Drink Company (sister brand)
-- **Customizations**: HD logo, Murecho font, #c86468 dusty rose color, Facebook/TikTok social links, notification-based cart, announcement bar
+- **Store URL**: hellodarlingdesigns.net
+- **GitHub Repo**: https://github.com/DustinHannon/Shopify_HelloDarling (public)
+- **Customizations**: HD logo, Murecho font, #c86468 dusty rose color, Facebook/TikTok social links, notification-based cart, announcement bar ("CURRENT PRODUCTION TIME 4-7 BUSINESS DAYS")
+- **Product Collections**: Embroidery, Badge Reels/Pop Sockets, Tea Towels, Magnets, Leather Products
 - **Structure**: Standard Shopify theme (assets/, config/, layout/, locales/, sections/, snippets/, templates/)
 - **Build tools**: None — pure Liquid/Shopify
-- **Repo**: https://github.com/DustinHannon/Shopify_HelloDarling (public)
+- **Files**: ~352 theme files, 40+ locale files (25+ languages)
 
 ## Ongoing Workflow
 
