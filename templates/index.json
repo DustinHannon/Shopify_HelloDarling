@@ -127,12 +127,21 @@
             "button_link": "https://www.darlingdrinkco.com/",
             "button_style_secondary": true
           }
+        },
+        "button_PMcCia": {
+          "type": "button",
+          "settings": {
+            "button_label": "Facebook Group",
+            "button_link": "https://www.facebook.com/groups/1729197157753383",
+            "button_style_secondary": true
+          }
         }
       },
       "block_order": [
         "heading_ar3CkT",
         "text_wBb4De",
-        "button_yRDDaM"
+        "button_yRDDaM",
+        "button_PMcCia"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
