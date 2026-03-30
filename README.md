@@ -40,10 +40,11 @@ docs/            Design specs (not synced to Shopify)
 
 The theme uses a glassmorphism design overlay (`assets/glass-theme.css`) on top of the Rise base theme:
 
-- **Font**: Quicksand (headers and body)
-- **Color**: #c86468 dusty rose/coral accent
+- **Fonts**: Pacifico (cursive headers), Quicksand (body)
+- **Color**: #c86468 dusty rose/coral accent with rich gradient background
 - **Effects**: Translucent panels with frosted glass / backdrop blur
 - **Header**: Non-sticky — scrolls away on product pages for maximum viewing area
+- **Mobile Menu**: Opaque drawer with glass styling, proper submenu layering
 - **Opacity**: Glass elements tuned for readability over product images
 
 All design rules use `!important` to override Shopify editor defaults by design. The `glass-theme.css` file is the single source for visual customizations.
