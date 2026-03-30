@@ -67,6 +67,14 @@ body .gradient,
   background-color: transparent !important;
 }
 
+/* Exclude drawer panels from gradient transparency */
+header-drawer .menu-drawer.gradient,
+header-drawer .menu-drawer__submenu.gradient,
+cart-drawer .drawer__inner.gradient {
+  background: rgba(255, 241, 242, 0.97) !important;
+  background-color: rgba(255, 241, 242, 0.97) !important;
+}
+
 /* ===========================================
    4. ANNOUNCEMENT BAR
    =========================================== */
@@ -392,10 +400,15 @@ a:not(.button):hover {
   box-shadow: 0 8px 32px rgba(200, 100, 130, 0.2) !important;
 }
 
-cart-drawer .drawer,
-menu-drawer .drawer {
+cart-drawer .drawer__inner,
+header-drawer .menu-drawer,
+header-drawer .menu-drawer__submenu {
   background: rgba(255, 241, 242, 0.97) !important;
   border-left: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+header-drawer .menu-drawer__utility-links {
+  background-color: rgba(200, 100, 130, 0.06) !important;
 }
 
 /* ===========================================
